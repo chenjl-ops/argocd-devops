@@ -1,0 +1,22 @@
+kind: HTTPRoute
+metadata:
+  name: op-wx-api
+  namespace: prod
+
+spec:
+  parentRefs:
+    - name: eg
+
+  hostnames:
+    - eg.123go.club
+
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+
+      backendRefs:
+        - name: op-wx-api
+          port: 80
+          weight: 1
