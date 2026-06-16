@@ -42,7 +42,7 @@ spec:
       serviceAccountName: op-wx-api
       containers:
         - name: op-wx-api
-          image: harbor-public.123go.club:9443/test/op-wx-api:v1
+          image: harbor-public.123go.club:9443/test/op-wx-api:ba05dc1_20260615112449
           command:
             - sh
             - -c
